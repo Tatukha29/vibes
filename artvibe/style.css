@@ -1,0 +1,60 @@
+body{
+	background: #E0DCC4;
+	height: 100%;
+	padding-top: 125px;
+}
+.block{
+	height: 125px;
+	width: 100.3%;
+	background: #5A5B5C;
+	box-sizing: border-box;
+	padding-top: 2%;
+	padding-left: 7.5%;
+
+}
+.block a{
+	color: #a6daff;
+}
+.header{
+	height: 125px;
+	width: 100.3%;
+	background: grey;
+	font-size: 50px;
+}
+.main{
+	background: #E0DCC4;
+	height: 3000px;
+	width: 100%;
+}
+.publbtn p{
+	font-size: 90px;
+
+}
+.postinput{
+	height: 80px;
+	width: 650px;
+	font-size: 40px;
+}
+.postbtn{
+	height: 80px;
+	width: 300px;
+	font-size: 40px;
+}
+.bisnes{
+	display: block;
+}
+.project{
+	display: none;
+}
+.postboxing{
+	height: 120%;
+	width: 80%;
+	background: pink;
+	font-size: 30px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 3%;
+	padding-bottom: 3%;
+	box-sizing: border-box;
+	padding-left: 3%;
+}
