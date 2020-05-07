@@ -1,6 +1,7 @@
 body{
-	background: #E0DCC4;
+	background-color: #E0DCC4;
 	height: 100%;
+	width: 100%;
 	padding-top: 200px;
 }
 .block{
@@ -17,7 +18,6 @@ body{
 }
 .header{
 	height: 200px;
-	width: 100.3%;
 	background: #E0DCC4;
 	font-size: 50px;
 }
@@ -36,22 +36,33 @@ body{
 }
 
 .main{
-	background: #E0DCC4;
-	height: 3000px;
+	height: 130%;
 	width: 100%;
+	margin-bottom: 13%;
+
 }
 .publbtn p{
 	font-size: 90px;
 	text-align: center;
 
 }
-.bisnesbtn{
-	text-decoration: underline;
+.publbtn2 p{
+	font-size: 90px;
+	text-align: center;
+
+}
+.projectbtn{
+	opacity: 25%;
 }
 .postinput{
 	height: 80px;
 	width: 650px;
 	font-size: 40px;
+	margin-bottom: 3%;
+}
+.posting p{
+font-size: 50px;
+
 }
 .postbtn{
 	height: 80px;
@@ -59,6 +70,7 @@ body{
 	font-size: 40px;
 }
 .bisnes{
+	width: 100%;
 	display: block;
 }
 .project{
@@ -66,8 +78,8 @@ body{
 }
 .postboxing{
 	height: 120%;
-	width: 80%;
-	background: pink;
+	width: 100%;
+	background: #D3A053;
 	font-size: 30px;
 	margin-left: auto;
 	margin-right: auto;
@@ -75,4 +87,85 @@ body{
 	padding-bottom: 3%;
 	box-sizing: border-box;
 	padding-left: 3%;
+	margin-bottom: 3%;
+}
+.postboxing img{
+	height: 100%;
+	width: 80%;
+	margin-left: 10%;
+
+}
+.account{
+	height: 30%;
+	width: 100%;
+	background: grey;
+	padding-top: 8%;
+	padding-bottom: 8%
+}
+.account img{
+	width: 30%;
+	margin-left: 33%;
+	border-radius: 48%;
+}
+.myself{
+	width: 80%;
+	margin-left: 10%;
+	font-size: 40px;
+	margin-top: 3%
+}
+.myself h6{
+	font-size: 50px;
+}
+.postboxing h5{
+font-size: 50px;
+}
+.postboxing h6{
+	font-size: 30px;
+}
+.postboxing p{
+	font-size: 40px;
+}
+.btnall{
+	font-size: 40px;
+	width: 50%;
+	text-align: center;
+}
+.btnall2{
+	font-size: 50px;
+	width: 50%;
+	text-align: center;
+}
+.flex{
+	display: flex;
+}
+.all{
+	opacity: 100%;
+}
+.music{
+	opacity: 25%;
+}
+.photo{
+	opacity: 25%;
+}
+.art{
+	opacity: 25%;
+}
+.postall{
+	display: block;
+}
+.postmusic{
+	display: none;
+}
+.postphoto{
+	display: none;
+}
+.postart{
+	display: none;
+}
+hr{
+	height: 2%;
+}
+.stick{
+	height: 100px;
+	margin-left: 5%;
 }

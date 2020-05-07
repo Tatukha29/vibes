@@ -6,7 +6,7 @@
 	<link rel="stylesheet" href="style.css">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
-<body  style="
+<body style="
   background: #E0DCC4;">
   <?php 
     $connect = mysqli_connect('127.0.0.1','root','','tanya29');
@@ -16,38 +16,45 @@
     $res3=$result3->fetch_assoc();
     $userid=$res3['user'];
   ?>
- <div class="header fixed-top row" width="4em">
-    <img src="art.png">
+  <div class="header fixed-top row" width="4em">
+    <img style="margin-right: 17%" src="art.png">
     <p>
-      Vibes
+      Мой аккаунт
     </p>
   </div>
   <div class="main">
+    <div class="account">
+      <img src="ava.jpg">
+    </div>
     <div class="row publ">
-      <div class="col btnall all">
+      <div class="col btnall2 all">
         <p>
-          Все
+          О себе
+        </p>
+        <hr>
+      </div>
+      <div class="col btnall2 music">
+         <p>
+          Понравившиеся
         </p>
       </div>
-      <div class="col btnall music">
+      <div class="col btnall2 music">
          <p>
-          Музыка
-        </p>
-      </div>
-      <div class="col btnall photo">
-         <p>
-          Фотография
-        </p>
-      </div>
-      <div class="col btnall art">
-         <p>
-          Живопись
+          Настройки
         </p>
       </div>
     </div>
+    <div class="myself">
+      <h6>
+      О себе
+      </h6>
+      <p>
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+      </p>
+    </div>
     <div class="postall">
     <?php 
-        for($i=$result2->num_rows;$i>0;$i--){
+        for($i=$result2->num_rows;$i>3;$i--){
           $res2=$result2->fetch_assoc();
           ?>
            <div class="">
@@ -70,49 +77,21 @@
             }
            ?>
     </div>
-    <div class="postmusic">
-    <?php 
-        for($i=$result2->num_rows;$i>0;$i--){
-          $res2=$result2->fetch_assoc();
-          if($res2['service']=="Музыка"){
-             ?>
-           <div class="">
-            <div class="postboxing">
-               <?php
-              echo '<h5>' . $res2['name'] . '</h5>';
-              ?>
-              <?php
-              echo '<h6>' . $res2['service'] . '</h6>';
-              ?>
-              <?php
-              echo '<p>' . $res2['post_text'] . '</p>';
-              ?>
-               <?php
-              echo '<img  style="height: 300px"src=" ' . $res2['img'] . '"</img>';
-              ?>
-            </div>
-           </div>
-           <?php 
-         }
-            }
-           ?>
-    </div>
   </div>
-
-	<div class="block fixed-bottom">
+  <div class="block fixed-bottom">
     <div class="row">
       <div  class="col justify-content-center">
         <a href="index.php">
-         <svg class="bi bi-pencil-square" width="5em" height="5em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+         <svg  class="bi bi-pencil-square" width="5em" height="5em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
   <path d="M15.502 1.94a.5.5 0 010 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 01.707 0l1.293 1.293zm-1.75 2.456l-2-2L4.939 9.21a.5.5 0 00-.121.196l-.805 2.414a.25.25 0 00.316.316l2.414-.805a.5.5 0 00.196-.12l6.813-6.814z"/>
   <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 002.5 15h11a1.5 1.5 0 001.5-1.5v-6a.5.5 0 00-1 0v6a.5.5 0 01-.5.5h-11a.5.5 0 01-.5-.5v-11a.5.5 0 01.5-.5H9a.5.5 0 000-1H2.5A1.5 1.5 0 001 2.5v11z" clip-rule="evenodd"/>
 </svg>
 </a>
       </div>
-      <div class="col">
+      <div class="col row">
          <a href="news.php">
-       <img style="width: 80px; height: 80px;"src="vibe.png">
-</a>
+       <img style="width: 80px; height: 80px;" src="vibe.png">
+        </a>
       </div>
       <div class="col">
         <a href="post.php">
@@ -133,7 +112,7 @@
       </div>
       <div class="col">
         <a href="account.php">
-     <svg class="bi bi-people-circle" width="5em" height="5em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+     <svg   style="color: white"class="bi bi-people-circle" width="5em" height="5em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
   <path d="M13.468 12.37C12.758 11.226 11.195 10 8 10s-4.757 1.225-5.468 2.37A6.987 6.987 0 008 15a6.987 6.987 0 005.468-2.63z"/>
   <path fill-rule="evenodd" d="M8 9a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd"/>
   <path fill-rule="evenodd" d="M8 1a7 7 0 100 14A7 7 0 008 1zM0 8a8 8 0 1116 0A8 8 0 010 8z" clip-rule="evenodd"/>

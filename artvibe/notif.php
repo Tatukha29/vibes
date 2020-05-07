@@ -6,7 +6,7 @@
 	<link rel="stylesheet" href="style.css">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
-<body  style="
+<body style="
   background: #E0DCC4;">
   <?php 
     $connect = mysqli_connect('127.0.0.1','root','','tanya29');
@@ -16,38 +16,16 @@
     $res3=$result3->fetch_assoc();
     $userid=$res3['user'];
   ?>
- <div class="header fixed-top row" width="4em">
-    <img src="art.png">
+  <div class="header fixed-top row" width="4em">
+    <img style="margin-right: 17%" src="art.png">
     <p>
-      Vibes
+      Мои проекты
     </p>
   </div>
   <div class="main">
-    <div class="row publ">
-      <div class="col btnall all">
-        <p>
-          Все
-        </p>
-      </div>
-      <div class="col btnall music">
-         <p>
-          Музыка
-        </p>
-      </div>
-      <div class="col btnall photo">
-         <p>
-          Фотография
-        </p>
-      </div>
-      <div class="col btnall art">
-         <p>
-          Живопись
-        </p>
-      </div>
-    </div>
     <div class="postall">
     <?php 
-        for($i=$result2->num_rows;$i>0;$i--){
+        for($i=$result2->num_rows;$i>3;$i--){
           $res2=$result2->fetch_assoc();
           ?>
            <div class="">
@@ -70,49 +48,21 @@
             }
            ?>
     </div>
-    <div class="postmusic">
-    <?php 
-        for($i=$result2->num_rows;$i>0;$i--){
-          $res2=$result2->fetch_assoc();
-          if($res2['service']=="Музыка"){
-             ?>
-           <div class="">
-            <div class="postboxing">
-               <?php
-              echo '<h5>' . $res2['name'] . '</h5>';
-              ?>
-              <?php
-              echo '<h6>' . $res2['service'] . '</h6>';
-              ?>
-              <?php
-              echo '<p>' . $res2['post_text'] . '</p>';
-              ?>
-               <?php
-              echo '<img  style="height: 300px"src=" ' . $res2['img'] . '"</img>';
-              ?>
-            </div>
-           </div>
-           <?php 
-         }
-            }
-           ?>
-    </div>
   </div>
-
-	<div class="block fixed-bottom">
+  <div class="block fixed-bottom">
     <div class="row">
       <div  class="col justify-content-center">
         <a href="index.php">
-         <svg class="bi bi-pencil-square" width="5em" height="5em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+         <svg  class="bi bi-pencil-square" width="5em" height="5em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
   <path d="M15.502 1.94a.5.5 0 010 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 01.707 0l1.293 1.293zm-1.75 2.456l-2-2L4.939 9.21a.5.5 0 00-.121.196l-.805 2.414a.25.25 0 00.316.316l2.414-.805a.5.5 0 00.196-.12l6.813-6.814z"/>
   <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 002.5 15h11a1.5 1.5 0 001.5-1.5v-6a.5.5 0 00-1 0v6a.5.5 0 01-.5.5h-11a.5.5 0 01-.5-.5v-11a.5.5 0 01.5-.5H9a.5.5 0 000-1H2.5A1.5 1.5 0 001 2.5v11z" clip-rule="evenodd"/>
 </svg>
 </a>
       </div>
-      <div class="col">
+      <div class="col row">
          <a href="news.php">
-       <img style="width: 80px; height: 80px;"src="vibe.png">
-</a>
+       <img style="width: 80px; height: 80px;" src="vibe.png">
+        </a>
       </div>
       <div class="col">
         <a href="post.php">
@@ -125,7 +75,7 @@
       </div>
       <div class="col">
         <a href="notif.php">
-       <svg class="bi bi-bell" width="5em" height="5em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+       <svg  style="color: #006D9D" class="bi bi-bell" width="5em" height="5em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
   <path d="M8 16a2 2 0 002-2H6a2 2 0 002 2z"/>
   <path fill-rule="evenodd" d="M8 1.918l-.797.161A4.002 4.002 0 004 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4.002 4.002 0 00-3.203-3.92L8 1.917zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 111.99 0A5.002 5.002 0 0113 6c0 .88.32 4.2 1.22 6z" clip-rule="evenodd"/>
 </svg>

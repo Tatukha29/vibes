@@ -6,7 +6,8 @@
 	<link rel="stylesheet" href="style.css">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
-<body>
+<body style="
+  background: #E0DCC4;">
   <?php 
     $connect = mysqli_connect('127.0.0.1','root','','tanya29');
     $result=mysqli_query($connect, "SELECT * FROM news");
@@ -34,46 +35,86 @@
         </p>
       </div>
     </div>
-    <div class="bisnes"> 
-    <form  method="POST" class="dropdown-item" action="post1.php" enctype="multipart/form-data">
+    <div>
+      <div class="row">
+        
+    <div class="bisnes col"> 
+    <form  method="POST" class="dropdown-item posting" action="post1.php" enctype="multipart/form-data">
+      <p>
+        Введите название своего объявления
+      </p>
         <input placeholder="Введите название" type="" name="name"  class="postinput">
-        <div class="input-group mb-7">
+        <p style="margin-bottom: -1%;">
+        Введите категорию,
+      </p>
+      <p style="margin-bottom: -1%;">
+       чтобы легче было находить ваши
+      </p>
+      <p> объявление
+      </p>
+     <div class="input-group mb-7">
   <div class="input-group-prepend">
   </div>
   <select class="postinput" name="service" id="inputGroupSelect01">
     <option style="height: 10px;width: 650px;font-size: 10px;" selected>Выберите категорию</option>
-    <option  style="height: 10px;width: 650px;font-size: 10px;" value="1">Музыка</option>
-    <option  style="height: 10px;width: 650px;font-size: 10px;" value="2">Фотография</option>
-    <option  style="height: 10px;width: 650px;font-size: 10px;" value="3">Живопись</option>
+    <option  style="height: 10px;width: 650px;font-size: 10px;" value="Музыка">Музыка</option>
+    <option  style="height: 10px;width: 650px;font-size: 10px;" value="Фотография">Фотография</option>
+    <option  style="height: 10px;width: 650px;font-size: 10px;" value="Живопись">Живопись</option>
   </select>
 </div>
+ <p>Напишите описание своего объявления
+      </p>
 <div class="input-group">
   <textarea name="post_text" style="width: 650px;height: 160px;font-size: 40px;"class="form-control" aria-label="With textarea"></textarea>
 </div>
-<input type="file" name="img" class="postinput">
-<button class="postbtn">  
-Опубликовать1</button>
+ <p>Выберите фото
+      </p>
+      <div style="display: block">
+        <input " type="file" name="img" class="postinput">
+
+      </div>
+<button type="button" style="font-size: 50px; width: 50%; height: 10%" class="btn btn-outline-danger btn-lg postbtn">Опубликовать</button>
     </form>
   </div>
+
+      </div>
+
 <div class="project"> 
-    <form  method="POST" class="dropdown-item" action="post2.php" enctype="multipart/form-data">
+   <form  method="POST" class="dropdown-item posting" action="post1.php" enctype="multipart/form-data">
+      <p>
+        Введите название своего проекта
+      </p>
         <input placeholder="Введите название" type="" name="name"  class="postinput">
-        <div class="input-group mb-7">
+        <p style="margin-bottom: -1%;">
+        Введите категорию,
+      </p>
+      <p style="margin-bottom: -1%;">
+       чтобы легче было находить ваши
+      </p>
+      <p> проекты
+      </p>
+     <div class="input-group mb-7">
   <div class="input-group-prepend">
   </div>
   <select class="postinput" name="service" id="inputGroupSelect01">
     <option style="height: 10px;width: 650px;font-size: 10px;" selected>Выберите категорию</option>
-    <option  style="height: 10px;width: 650px;font-size: 10px;" value="1">Музыка</option>
-    <option  style="height: 10px;width: 650px;font-size: 10px;" value="2">Фотография</option>
-    <option  style="height: 10px;width: 650px;font-size: 10px;" value="3">Живопись</option>
+    <option  style="height: 10px;width: 650px;font-size: 10px;" value="Музыка">Музыка</option>
+    <option  style="height: 10px;width: 650px;font-size: 10px;" value="Фотография">Фотография</option>
+    <option  style="height: 10px;width: 650px;font-size: 10px;" value="Живопись">Живопись</option>
   </select>
 </div>
+ <p>Напишите описание своего проекта
+      </p>
 <div class="input-group">
   <textarea name="post_text" style="width: 650px;height: 160px;font-size: 40px;"class="form-control" aria-label="With textarea"></textarea>
 </div>
-<input type="file" name="img" class="postinput">
-<button class="postbtn">  
-Опубликовать2</button>
+ <p>Выберите фото
+      </p>
+      <div style="display: block">
+        <input " type="file" name="img" class="postinput">
+
+      </div>
+<button type="button" style="font-size: 50px; width: 50%; height: 10%" class="btn btn-outline-danger btn-lg postbtn">Опубликовать</button>
     </form>
   </div>
    </div>

@@ -6,7 +6,8 @@
 	<link rel="stylesheet" href="style.css">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
-<body>
+<body style="
+  background: #E0DCC4;">
   <?php 
     $connect = mysqli_connect('127.0.0.1','root','','tanya29');
     $result=mysqli_query($connect, "SELECT * FROM news");
@@ -16,35 +17,141 @@
     $userid=$res3['user'];
   ?>
   <div class="header fixed-top row" width="4em">
-    <img src="art.png">
-    <p>
-      Vibes
+    <img  style="margin-right: 17%"src="art.png">
+    <p>Объявления
     </p>
   </div>
   <div class="main">
+   
+    <div class="row publ">
+      <div class="col btnall all">
+        <p>
+          Все
+        </p>
+        <hr>
+      </div>
+      <div class="col btnall music">
+         <p>
+          Музыка
+        </p>
+      </div>
+      <div class="col btnall photo">
+         <p>
+          Фотография
+        </p>
+      </div>
+      <div class="col btnall art">
+         <p>
+          Живопись
+        </p>
+      </div>
+    </div>
+    <div class="postall">
      <?php 
         for($i=$result->num_rows;$i>0;$i--){
-          $res2=$result2->fetch_assoc();
+          $res=$result->fetch_assoc();
           ?>
            <div class="">
             <div class="postboxing">
                <?php
-              echo '<p>' . $res2['name'] . '</p>';
+              echo '<h5>' . $res['name'] . '</h5>';
               ?>
               <?php
-              echo '<h5>' . $res2['service'] . '</h5>';
+              echo '<h6>' . $res['service'] . '</h6>';
               ?>
               <?php
-              echo '<p>' . $res2['post_text'] . '</p>';
+              echo '<p>' . $res['post_text'] . '</p>';
               ?>
                <?php
-              echo '<img class="justify-content-center" src=" ' . $res2['img'] . '"</img>';
+              echo '<img class="justify-content-center" src=" ' . $res['img'] . '"</img>';
               ?>
             </div>
            </div>
            <?php 
             }
            ?>
+        </div>
+        <div class="postmusic">
+     <?php 
+        for($i=$result->num_rows;$i>0;$i--){
+          $res=$result->fetch_assoc();
+          if($res['service']=="Музыка"){
+          ?>
+           <div class="">
+            <div class="postboxing">
+               <?php
+              echo '<h5>' . $res['name'] . '</h5>';
+              ?>
+              <?php
+              echo '<h6>' . $res['service'] . '</h6>';
+              ?>
+              <?php
+              echo '<p>' . $res['post_text'] . '</p>';
+              ?>
+               <?php
+              echo '<img class="justify-content-center" src=" ' . $res['img'] . '"</img>';
+              ?>
+            </div>
+           </div>
+           <?php 
+         }
+            }
+           ?>
+        </div>
+        <div class="postphoto">
+     <?php 
+        for($i=$result->num_rows;$i>0;$i--){
+          $res=$result->fetch_assoc();
+          if($res['service']=="Фотография"){
+          ?>
+           <div class="">
+            <div class="postboxing">
+               <?php
+              echo '<h5>' . $res['name'] . '</h5>';
+              ?>
+              <?php
+              echo '<h6>' . $res['service'] . '</h6>';
+              ?>
+              <?php
+              echo '<p>' . $res['post_text'] . '</p>';
+              ?>
+               <?php
+              echo '<img class="justify-content-center" src=" ' . $res['img'] . '"</img>';
+              ?>
+            </div>
+           </div>
+           <?php 
+         }
+            }
+           ?>
+        </div>
+           <div class="postart">
+     <?php 
+        for($i=$result->num_rows;$i>0;$i--){
+          $res=$result->fetch_assoc();
+          if($res['service']=="Живопись"){
+          ?>
+           <div class="">
+            <div class="postboxing">
+               <?php
+              echo '<h5>' . $res['name'] . '</h5>';
+              ?>
+              <?php
+              echo '<h6>' . $res['service'] . '</h6>';
+              ?>
+              <?php
+              echo '<p>' . $res['post_text'] . '</p>';
+              ?>
+               <?php
+              echo '<img class="justify-content-center" src=" ' . $res['img'] . '"</img>';
+              ?>
+            </div>
+           </div>
+           <?php 
+         }
+            }
+           ?>
+        </div>
   </div>
 
 	<div class="block fixed-bottom">
