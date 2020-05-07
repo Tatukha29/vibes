@@ -15,8 +15,11 @@
     $res3=$result3->fetch_assoc();
     $userid=$res3['user'];
   ?>
-  <div class="header fixed-top" width="4em">
-    keep calm and wait for the logo to appear
+  <div class="header fixed-top row" width="4em">
+    <img src="art.png">
+    <p>
+      Vibes
+    </p>
   </div>
   <div class="main">
      <?php 
@@ -46,20 +49,18 @@
 
 	<div class="block fixed-bottom">
     <div class="row">
-      <div class="col justify-content-center">
+      <div  class="col justify-content-center">
         <a href="index.php">
-        <svg class="justify-content-center bi bi-justify" width="5em" height="5em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-  <path fill-rule="evenodd" d="M2 12.5a.5.5 0 01.5-.5h11a.5.5 0 010 1h-11a.5.5 0 01-.5-.5zm0-3a.5.5 0 01.5-.5h11a.5.5 0 010 1h-11a.5.5 0 01-.5-.5zm0-3a.5.5 0 01.5-.5h11a.5.5 0 010 1h-11a.5.5 0 01-.5-.5zm0-3a.5.5 0 01.5-.5h11a.5.5 0 010 1h-11a.5.5 0 01-.5-.5z" clip-rule="evenodd"/>
-</svg>
-</a>
-      </div>
-      <div class="col">
-         <a href="news.php">
-        <svg class="bi bi-pencil-square" width="5em" height="5em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+         <svg  style="color: #006D9D"  class="bi bi-pencil-square" width="5em" height="5em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
   <path d="M15.502 1.94a.5.5 0 010 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 01.707 0l1.293 1.293zm-1.75 2.456l-2-2L4.939 9.21a.5.5 0 00-.121.196l-.805 2.414a.25.25 0 00.316.316l2.414-.805a.5.5 0 00.196-.12l6.813-6.814z"/>
   <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 002.5 15h11a1.5 1.5 0 001.5-1.5v-6a.5.5 0 00-1 0v6a.5.5 0 01-.5.5h-11a.5.5 0 01-.5-.5v-11a.5.5 0 01.5-.5H9a.5.5 0 000-1H2.5A1.5 1.5 0 001 2.5v11z" clip-rule="evenodd"/>
 </svg>
 </a>
+      </div>
+      <div class="col row">
+         <a href="news.php">
+       <img style="width: 80px; height: 80px;" src="vibe.png">
+        </a>
       </div>
       <div class="col">
         <a href="post.php">

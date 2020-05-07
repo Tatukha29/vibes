@@ -1,7 +1,7 @@
 body{
 	background: #E0DCC4;
 	height: 100%;
-	padding-top: 125px;
+	padding-top: 200px;
 }
 .block{
 	height: 125px;
@@ -16,11 +16,25 @@ body{
 	color: #a6daff;
 }
 .header{
-	height: 125px;
+	height: 200px;
 	width: 100.3%;
-	background: grey;
+	background: #E0DCC4;
 	font-size: 50px;
 }
+.header img{
+	height: 50%;
+	margin-top: 5%;
+	margin-left: 10%;
+	margin-right: 37%;
+
+}
+.header p{
+	font-size: 70px;
+	margin-top: 5%;
+	color: #006D9D;
+
+}
+
 .main{
 	background: #E0DCC4;
 	height: 3000px;
@@ -28,7 +42,11 @@ body{
 }
 .publbtn p{
 	font-size: 90px;
+	text-align: center;
 
+}
+.bisnesbtn{
+	text-decoration: underline;
 }
 .postinput{
 	height: 80px;
